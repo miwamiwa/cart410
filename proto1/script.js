@@ -51,11 +51,13 @@ function markPoint(lat,lon){
     lat: startPos.lon - lon
   }
 
-  deltaBox.innerHTML = "delta Latitude: "+delta.lat
-  + "<br> delta Longitude: "+delta.lon;
-
   let x = windowMid.x + delta.lon * scaling;
   let y = windowMid.y + delta.lat * scaling;
+
+  deltaBox.innerHTML = "delta Latitude: "+delta.lat
+  + "<br> delta Longitude: "+delta.lon
+  + "<br> new x: "+x
+  + "<br> new y: "+y;
 
   console.log(windowMid,delta);
   let result = document.createElement("div");
