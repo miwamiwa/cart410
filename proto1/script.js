@@ -1,7 +1,7 @@
 window.onload = start;
 let textBox, deltaBox;
 let startPos = false;
-let scaling = 1000;
+let scaling = 500000;
 let windowMid;
 
 function start(){
