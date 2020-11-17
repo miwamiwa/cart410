@@ -1,8 +1,13 @@
 window.onload = start;
 let textBox, deltaBox;
 let startPos = false;
-let scaling = 500000;
+let scaling = 1000000;
 let windowMid;
+let stampColor = {
+  r: 0,
+  g: 0,
+  b: 0
+}
 
 function start(){
 
@@ -60,12 +65,21 @@ function markPoint(lat,lon){
   + "<br> new y: "+y;
 
   console.log(windowMid,delta);
+  if( stampColor.r < 180 ) stampColor.r += 15;
+  else if(stampColor.g<180) stampColor.g += 15;
+  else if(stampColor.b<180) stampColor.b += 15;
+  else {
+    stampColor.r = 0;
+    stampColor.g =0;
+    stampColor.b =0;
+  }
+  
   let result = document.createElement("div");
   result.setAttribute("style",`
   position:fixed;
   width:10px;
   height:10px;
-  background-color:#3335;
+  background-color:rgba(${stampColor.r},${stampColor.g},${stampColor.b},0.3);
   left:${x}px;
   top:${y}px;
   `);
