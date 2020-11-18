@@ -30,10 +30,10 @@ function start(){
   document.body.appendChild(deltaBox);
 
   accBox = document.createElement("div");
-  document.body.appendChild(deltaBox);
+  document.body.appendChild(accBox);
 
   rotBox = document.createElement("div");
-  document.body.appendChild(deltaBox);
+  document.body.appendChild(rotBox);
 
   getLocation();
 
@@ -63,7 +63,7 @@ function onSuccess(acceleration) {
 
 function onError(error) {
   // Handle any errors we may face
-  alert('error');
+  accBox.innerHTML="ACC FAIL"
 }
 
 
