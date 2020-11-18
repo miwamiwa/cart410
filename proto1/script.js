@@ -9,6 +9,12 @@ let stampColor = {
   b: 0
 }
 
+let markNextPoint= false;
+let counter =0;
+function mousePressed(){
+  markNextPoint = true;
+}
+
 function start(){
 
   windowMid = {
@@ -51,6 +57,8 @@ function showPosition(position) {
 
 function markPoint(lat,lon){
 
+
+
   let delta = {
     lon: startPos.lat - lat,
     lat: startPos.lon - lon
@@ -73,16 +81,21 @@ function markPoint(lat,lon){
     stampColor.g =0;
     stampColor.b =0;
   }
-  
+
   let result = document.createElement("div");
   result.setAttribute("style",`
   position:fixed;
   width:10px;
+  font-size:30px;
   height:10px;
   background-color:rgba(${stampColor.r},${stampColor.g},${stampColor.b},0.3);
   left:${x}px;
   top:${y}px;
   `);
-
+  if(markNextPoint){
+    result.innerHTML = counter;
+    counter++;
+  }
+  markNextPoint = false;
   document.body.appendChild(result);
 }
