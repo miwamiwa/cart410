@@ -11,6 +11,7 @@ let stampColor = {
 
 let markNextPoint= false;
 let counter =0;
+let rotBox;
 function mousePressed(){
   markNextPoint = true;
 }
@@ -28,8 +29,43 @@ function start(){
   deltaBox = document.createElement("div");
   document.body.appendChild(deltaBox);
 
- getLocation();
+  accBox = document.createElement("div");
+  document.body.appendChild(deltaBox);
+
+  rotBox = document.createElement("div");
+  document.body.appendChild(deltaBox);
+
+  getLocation();
+
+  navigator.accelerometer.getCurrentAcceleration(
+      onSuccess, onError);
+
+      window.addEventListener("deviceorientation", function(e) {
+        // remember to use vendor-prefixed transform property
+        rotBox.innerHTML =
+          "rotateZ(" + ( e.alpha - 180 ) + "deg) " +
+          "<br>rotateX(" + e.beta + "deg) " +
+          "<br>rotateY(" + ( -e.gamma ) + "deg)";
+      });
+
 }
+
+
+
+function onSuccess(acceleration) {
+
+  accBox.innerHTML  =
+    'Acceleration X: ' + acceleration.x + '<br />' +
+    'Acceleration Y: ' + acceleration.y + '<br />' +
+    'Acceleration Z: ' + acceleration.z + '<br />' +
+    'Timestamp: '      + acceleration.timestamp;
+}
+
+function onError(error) {
+  // Handle any errors we may face
+  alert('error');
+}
+
 
 function getLocation() {
   if (navigator.geolocation) {
