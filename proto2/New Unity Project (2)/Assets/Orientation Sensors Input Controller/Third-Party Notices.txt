@@ -1,0 +1,41 @@
+Legal Notice
+
+This asset is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+
+A) Sword mesh and textures located in “MSP_Input/Demo’s/Prefabs/Sword”
+
+License: Creative Commons CC0 1.0 Universal (CC0 1.0)
+"No Copyright. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission."
+To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/legalcode
+For a human-readable summary of the legal code, visit https://creativecommons.org/publicdomain/zero/1.0/)
+
+Original source: https://opengameart.org/
+
+
+
+
+
+B) All audio files located in the directory “MSP_Input/Demo’s/Sounds”
+
+License: Creative Commons CC0 1.0 Universal (CC0 1.0)
+"No Copyright. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission."
+To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/legalcode
+For a human-readable summary of the legal code, visit https://creativecommons.org/publicdomain/zero/1.0/)
+
+Original source: https://opengameart.org/
+
+
+
+
+
+C) All textures located in the directory “MSP_Input/Demo’s/Textures/CC0”
+
+License: Creative Commons CC0 1.0 Universal (CC0 1.0)
+"No Copyright. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission."
+To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/legalcode
+For a human-readable summary of the legal code, visit https://creativecommons.org/publicdomain/zero/1.0/)
+
+Original sources: 
+	https://opengameart.org/
+	https://openclipart.org/
